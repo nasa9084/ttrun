@@ -5,7 +5,7 @@ run text/template from commandline
 ** SYNOPSIS
 
 #+BEGIN_SRC
-$ bin/ttrun -a name=someone -a attended=true -a gift=item test/testtemplate.tmpl
+$ bin/ttrun -a name=someone -a attended -a gift=item test/testtemplate.tmpl
 Dear someone,
 
 It was a pleasure to see you at the wedding.

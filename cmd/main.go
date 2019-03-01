@@ -58,9 +58,14 @@ func _main() error {
 
 func parseArgs(args []string) (map[string]string, error) {
 	ret := map[string]string{}
-	for i, arg := range args {
+	for _, arg := range args {
 		if !strings.Contains(arg, "=") {
-			return nil, fmt.Errorf("argument %d does not includes `=`", i)
+			key := strings.Trim(arg, " ")
+			if _, ok := ret[key]; ok {
+				return nil, fmt.Errorf("argument %s is already defined", key)
+			}
+			ret[key] = "true"
+			continue
 		}
 		fs := strings.FieldsFunc(arg, func(r rune) bool { return r == '=' })
 		if len(fs) != 2 {
