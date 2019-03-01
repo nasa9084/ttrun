@@ -17,4 +17,4 @@ Josie
 
 ** HELP
 
-`bin/ttrun -h`
+=$ bin/ttrun -h=
