@@ -1,0 +1,20 @@
+* ttrun
+
+run text/template from commandline
+
+** SYNOPSIS
+
+#+BEGIN_SRC
+$ bin/ttrun -a name=someone -a attended=true -a gift=item test/testtemplate.tmpl
+Dear someone,
+
+It was a pleasure to see you at the wedding.
+Thank you for the lovely item.
+
+Best wishes,
+Josie
+#+END_SRC
+
+** HELP
+
+`bin/ttrun -h`
